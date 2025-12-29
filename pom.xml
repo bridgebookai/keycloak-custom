@@ -37,11 +37,11 @@
         <keycloak-config-cli.version>26.1.0_v6.4.0</keycloak-config-cli.version> <!-- from https://github.com/adorsys/keycloak-config-cli/releases -->
         <auto-service.version>1.0.1</auto-service.version>
         <!-- https://github.com/dasniko/testcontainers-keycloak/releases -->
-        <testcontainers-keycloak.version>3.7.0</testcontainers-keycloak.version>
-        <testcontainers-postgres.version>1.21.1</testcontainers-postgres.version>
-        <testcontainers.version>1.20.6</testcontainers.version>
+        <testcontainers-keycloak.version>4.0.1</testcontainers-keycloak.version>
+        <testcontainers-postgres.version>1.21.4</testcontainers-postgres.version>
+        <testcontainers.version>1.21.4</testcontainers.version>
         <junit-jupiter-engine.version>5.12.1</junit-jupiter-engine.version>
-        <failsafe-plugin.version>3.2.5</failsafe-plugin.version>
+        <failsafe-plugin.version>3.5.4</failsafe-plugin.version>
     </properties>
 
     <dependencyManagement>

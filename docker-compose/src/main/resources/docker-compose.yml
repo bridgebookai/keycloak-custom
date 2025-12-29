@@ -1,20 +1,21 @@
 version: '3'
 
 networks:
-  keycloak:
+  bridgebook-ai:
+    external: true #Use the external network from the core-service-api
 
 services:
   keycloak:
     image: ${docker.registry}${project.groupId}.container:${project.version}
     container_name: ${project.groupId}.container
     ports:
-      - "8080:8080"
+      - "8082:8080"
       - "8443:8443"
     env_file:
       - keycloak.common.env
       - keycloak.specific.env
       - secrets.env
     networks:
-      - keycloak
+      - bridgebook-ai
     labels:
       org.labels-schema.group: "iam"

@@ -204,6 +204,13 @@ forwardSigterm() {
 
 trap forwardSigterm SIGTERM
 
+# Wait for Keycloak to be ready before running setup
+echo "--> Waiting for Keycloak to be ready..."
+sleep 30  # Give Keycloak time to fully start up
+echo "--> Keycloak should be ready, running setup..."
+
+# Run setup script - output may not appear in Docker logs due to background execution
+# To fix: add '2>&1' to redirect output to main process: source $DIRNAME/keycloak-setup.sh 2>&1
 source $DIRNAME/keycloak-setup.sh
 
 #to keep the container running until keycloak shuts down
